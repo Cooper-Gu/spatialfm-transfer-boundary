@@ -1,0 +1,44 @@
+{
+  "study_id": "SFM-TRANSFER-PREREG-001",
+  "freeze_time_utc": "2026-09-27 19:26:22 UTC",
+  "status": "locally_frozen_pending_public_registry",
+  "target_source": "spatialLIBD Human DLPFC Visium",
+  "donors": 3,
+  "holdout": "leave_one_donor_out",
+  "common_genes": 5442,
+  "panel_fractions": [
+    0.1,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "training_donor_counts": [
+    1,
+    2
+  ],
+  "probe_seeds": [
+    260,
+    261,
+    262
+  ],
+  "pca_components": "min(64, n_genes - 1)",
+  "primary_endpoint": "heldout_donor_macro_f1_model_minus_raw_at_full_panel_two_training_donors",
+  "secondary_endpoints": [
+    "heldout_donor_macro_f1_model_minus_pca",
+    "macro_f1_panel_curve",
+    "marker_program_pearson_r",
+    "continuous_moran_abs_and_signed_error_k4_k6_k12",
+    "within_layer_consistency_boundary_recall_edge_agreement"
+  ],
+  "decision_rule": "full_condition_model_mean_macro_f1_exceeds_raw_and_pca_and_positive_in_at_least_2_of_3_donors",
+  "biological_unit": "donor",
+  "technical_repeats": [
+    "slice",
+    "program",
+    "probe_seed"
+  ],
+  "target_labels_used_for_fitting": false,
+  "public_registry_required_before_confirmatory_execution": true,
+  "no_post_outcome_condition_additions": true
+}

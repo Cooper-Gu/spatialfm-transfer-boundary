@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+title: "SpatialFM transfer-boundary study"
+message: "If you use this code, please cite the protocol archive and the associated manuscript."
+type: software
+authors:
+  - name: "SpatialFM transfer-boundary study contributors"
+year: 2026
+doi: "10.5281/zenodo.23001983"
+license: MIT
+abstract: >-
+  Reproducible code for donor-heldout and cross-source evaluation of spatial
+  transcriptomic representations, including Transformer training audits,
+  spatial diagnostics, preregistered evaluators and publication figures.

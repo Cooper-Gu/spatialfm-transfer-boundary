@@ -1,0 +1,40 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+.env
+*.log
+*.tmp
+*.swp
+
+# Large/private research assets
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.hdf5
+*.h5ad
+*.npz
+*.npy
+*.parquet
+*.zarr/
+data/
+datasets/
+checkpoints/
+weights/
+outputs/
+reports/
+
+# Reproducible outputs are generated locally from JSON reports
+manuscript/figures/
+source_data/
+
+# Local editor and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

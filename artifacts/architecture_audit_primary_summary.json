@@ -1,0 +1,159 @@
+{
+  "protocol": {
+    "endpoint": "full_ontology",
+    "ontology": [
+      "L1",
+      "L2",
+      "L3",
+      "L4",
+      "L5",
+      "L6",
+      "WM"
+    ],
+    "heldout_unit": "donor",
+    "n_training_donors": 2,
+    "panel_fraction": 1.0,
+    "probe_seeds": [
+      260,
+      261,
+      262
+    ],
+    "baselines": [
+      "raw",
+      "pca"
+    ],
+    "n_donors": 3
+  },
+  "records": [
+    {
+      "architecture": "mask_aware_mlp",
+      "checkpoint": "fullclass_seed20262018.json",
+      "sha256": "0560af1631ee5340e3b5959db0814928e47092a571a029360b2ca081c57df8f5",
+      "model_macro_f1_mean": 0.3768147911,
+      "raw_macro_f1_mean": 0.4765962369,
+      "pca_macro_f1_mean": 0.4827177676,
+      "model_minus_raw": -0.0997814458,
+      "model_minus_pca": -0.1059029764,
+      "donor_model_minus_raw": [
+        -0.0950527328,
+        -0.0757824609,
+        -0.1285084424
+      ]
+    },
+    {
+      "architecture": "mask_aware_mlp",
+      "checkpoint": "mlp_dlpfc_fullclass_seed20262019.json",
+      "sha256": "ada5f14dfd0a82de753716719f0e00db8029f3aa1650907fc7729473b0ffc0b7",
+      "model_macro_f1_mean": 0.373997,
+      "raw_macro_f1_mean": 0.4765962369,
+      "pca_macro_f1_mean": 0.4827177676,
+      "model_minus_raw": -0.102599,
+      "model_minus_pca": -0.108721,
+      "donor_model_minus_raw": [
+        -0.093,
+        -0.0808,
+        -0.134
+      ]
+    },
+    {
+      "architecture": "sparse_transformer_whitening",
+      "checkpoint": "whiten_seed20262021.json",
+      "sha256": "4c00c25b8115ff56b175cfc47115bff32a59e0e909a4855c55f88af8bd94b7eb",
+      "model_macro_f1_mean": 0.1744182946,
+      "raw_macro_f1_mean": 0.4765962369,
+      "pca_macro_f1_mean": 0.4827177676,
+      "model_minus_raw": -0.3021779423,
+      "model_minus_pca": -0.3082994729,
+      "donor_model_minus_raw": [
+        -0.297332,
+        -0.247822,
+        -0.36138
+      ]
+    },
+    {
+      "architecture": "sparse_transformer_whitening",
+      "checkpoint": "whiten_seed20262022.json",
+      "sha256": "9ff0dc80034d67dc4c04b92692b361ae5755ef1e8453b3056bd1ee4a5d641a03",
+      "model_macro_f1_mean": 0.1746391704,
+      "raw_macro_f1_mean": 0.4765962369,
+      "pca_macro_f1_mean": 0.4827177676,
+      "model_minus_raw": -0.3019570665,
+      "model_minus_pca": -0.3080785972,
+      "donor_model_minus_raw": [
+        -0.285634,
+        -0.2384,
+        -0.381837
+      ]
+    },
+    {
+      "architecture": "sparse_transformer_repair",
+      "checkpoint": "repair_seed20262011.json",
+      "sha256": "301760d1173d78d723592608a419adcf2c84c9dfbe1f488d2b70040df6ff091d",
+      "model_macro_f1_mean": 0.2132,
+      "raw_macro_f1_mean": 0.4765962369,
+      "pca_macro_f1_mean": 0.4827177676,
+      "model_minus_raw": -0.2634,
+      "model_minus_pca": -0.2696,
+      "donor_model_minus_raw": [
+        -0.2944,
+        -0.2036,
+        -0.2923
+      ]
+    },
+    {
+      "architecture": "sparse_transformer_repair",
+      "checkpoint": "repair_seed20262012.json",
+      "sha256": "3526cb50e3383ca6e05577b97e94a585854c818b6f19332293d91322e9642313",
+      "model_macro_f1_mean": 0.2247,
+      "raw_macro_f1_mean": 0.4765962369,
+      "pca_macro_f1_mean": 0.4827177676,
+      "model_minus_raw": -0.2519,
+      "model_minus_pca": -0.258,
+      "donor_model_minus_raw": [
+        -0.2804,
+        -0.2088,
+        -0.2665
+      ]
+    },
+    {
+      "architecture": "sparse_transformer_foundation",
+      "checkpoint": "sparse_seed20262001.json",
+      "sha256": "32b9dccb85004d40234d2eaea1e3dfc00807e616e6faa134af82640a47d6694b",
+      "model_macro_f1_mean": 0.2505,
+      "raw_macro_f1_mean": 0.4765962369,
+      "pca_macro_f1_mean": 0.4827177676,
+      "model_minus_raw": -0.2261,
+      "model_minus_pca": -0.2322,
+      "donor_model_minus_raw": [
+        -0.2457,
+        -0.1901,
+        -0.2426
+      ]
+    },
+    {
+      "architecture": "sparse_transformer_foundation",
+      "checkpoint": "sparse_seed20262002.json",
+      "sha256": "7503ec51f11993db4888c66f3805c4a4fd0fe512c283053239bc79d8ca9293cf",
+      "model_macro_f1_mean": 0.236,
+      "raw_macro_f1_mean": 0.4765962369,
+      "pca_macro_f1_mean": 0.4827177676,
+      "model_minus_raw": -0.2406,
+      "model_minus_pca": -0.2468,
+      "donor_model_minus_raw": [
+        -0.2788,
+        -0.1842,
+        -0.2589
+      ]
+    }
+  ],
+  "interpretation": {
+    "architecture_gate": "passed for an architecture-level limitation within the tested recipe families: MLP and sparse Transformer each have >=2 independent checkpoints and all donor-level paired differences are negative against both baselines",
+    "scope_limit": "This does not establish a universal model-class boundary. It supports a preregistered limitation of the tested frozen checkpoints and training recipes on the DLPFC full-ontology donor-heldout task.",
+    "next_required": [
+      "external assay/platform transfer with the same checkpoint hashes",
+      "independent protein or morphology readout",
+      "probe-robustness sensitivity (nonlinear or nearest-neighbor probe)",
+      "data-scale and pretraining-corpus ablations before claiming foundation-model insufficiency"
+    ]
+  }
+}

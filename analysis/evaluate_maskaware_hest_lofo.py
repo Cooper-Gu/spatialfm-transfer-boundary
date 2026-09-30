@@ -1,0 +1,52 @@
+#!/usr/bin/env python3
+"""Fast strict leave-one-slice-out HEST organ-domain audit.
+
+Uses standardized nearest-class-centroid probes. Each test slice is omitted
+from the centroids; organ labels are metadata-level, not spot-level truth.
+"""
+import argparse, glob, json, os
+from pathlib import Path
+import numpy as np, torch
+from torch import nn
+from sklearn.metrics import f1_score
+
+class M(nn.Module):
+    def __init__(self,n,p,h,l,platform_dim=8):
+        super().__init__(); self.platform=nn.Sequential(nn.Linear(platform_dim,32),nn.GELU()); self.encoder=nn.Sequential(nn.Linear(2*n+32,h),nn.LayerNorm(h),nn.GELU(),nn.Linear(h,l))
+    def forward(self,x,o,p): return self.encoder(torch.cat([x,o,self.platform(p)],1))
+
+def emb(ms,X,O,P,d):
+    out=[]
+    with torch.inference_mode():
+        for s in range(0,len(X),512):
+            xx=torch.from_numpy(X[s:s+512]).to(d); oo=torch.from_numpy(O[s:s+512]).to(d); pp=torch.from_numpy(P[s:s+512]).to(d)
+            out.append(np.mean([m(xx,oo,pp).cpu().numpy() for m in ms],0))
+    return np.concatenate(out)
+
+def centroid_predict(Atr,ytr,B,classes):
+    mu=Atr.mean(0); sd=Atr.std(0); sd[sd<1e-6]=1.0; Atr=(Atr-mu)/sd; B=(B-mu)/sd
+    cen=np.stack([Atr[ytr==i].mean(0) for i in range(len(classes))]); den=np.linalg.norm(cen,axis=1); den[den<1e-8]=1.0; cen=cen/den[:,None]
+    bb=B/(np.linalg.norm(B,axis=1,keepdims=True)+1e-8); return (bb@cen.T).argmax(1)
+
+def main():
+    ap=argparse.ArgumentParser(); ap.add_argument('--cache-dir',required=True); ap.add_argument('--checkpoint',action='append',required=True); ap.add_argument('--out',required=True); a=ap.parse_args()
+    fs=sorted(glob.glob(str(Path(a.cache_dir)/'*.npz'))); rows=[]
+    for f in fs:
+        z=np.load(f,allow_pickle=False); rows.append({'file':os.path.basename(f),'X':z['E'].astype('float32'),'O':np.repeat(z['panel'].astype('float32'),len(z['E']),0),'P':np.eye(8,dtype='float32')[[0]*len(z['E'])],'y':str(z['region_label'].astype(str)[0])})
+    genes=np.load(fs[0],allow_pickle=False)['genes'].astype(str); d=torch.device('cuda' if torch.cuda.is_available() else 'cpu'); ms=[]
+    for ck in a.checkpoint:
+        o=torch.load(ck,map_location='cpu'); c=o['config']; m=M(len(genes),len(c['program_names']),c['hidden'],c['latent'],c.get('platform_dim',8)).to(d); m.load_state_dict(o['model'],strict=False); m.eval(); ms.append(m)
+    for r in rows: r['Z']=emb(ms,r['X'],r['O'],r['P'],d)
+    labels=sorted({r['y'] for r in rows}); cmap={c:i for i,c in enumerate(labels)}; folds=[]
+    for ti,test in enumerate(rows):
+        tr=[r for j,r in enumerate(rows) if j!=ti]; Xtr=np.concatenate([r['X'] for r in tr]); Ztr=np.concatenate([r['Z'] for r in tr]); ytr=np.array([cmap[r['y']] for r in tr for _ in range(len(r['X']))]); yte=np.full(len(test['X']),cmap[test['y']]); row={'test_file':test['file'],'label':test['y'],'n_test':int(len(yte))}
+        for name,A,B in [('maskaware',Ztr,test['Z']),('raw',Xtr,test['X'])]:
+            pr=centroid_predict(A,ytr,B,labels); row[name]={'macro_f1':float(f1_score(yte,pr,average='macro')),'accuracy':float(np.mean(pr==yte))}
+        folds.append(row)
+    agg={}
+    for n in ['maskaware','raw']:
+        vals=np.array([r[n]['macro_f1'] for r in folds]); raw=np.array([r['raw']['macro_f1'] for r in folds]); agg[n]={'mean_macro_f1':float(vals.mean()),'sd_macro_f1':float(vals.std(ddof=1)),'wins_vs_raw':int(np.sum(vals>raw))}
+    out={'stage':'hest_lofo','source':'HEST ST independent wide-panel slices','n_files':len(rows),'labels':labels,'overlap_genes':int(np.sum(np.load(fs[0],allow_pickle=False)['panel']>0)),'aggregate':agg,'folds':folds,'note':'Fast standardized nearest-class-centroid probe; complete-slice leave-one-out; metadata-level organ labels; no held-out spots used for probe fitting; files absent from public_regions_union6k_pilot stats.'}
+    Path(a.out).parent.mkdir(parents=True,exist_ok=True); Path(a.out).write_text(json.dumps(out,indent=2,ensure_ascii=False)); print(json.dumps(out,indent=2,ensure_ascii=False))
+
+if __name__=='__main__': main()

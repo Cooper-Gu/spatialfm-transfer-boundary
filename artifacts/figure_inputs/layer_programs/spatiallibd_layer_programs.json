@@ -1,0 +1,902 @@
+{
+  "stage": "layer_programs",
+  "source": "spatialLIBD Human DLPFC Visium",
+  "task": "train-donor-derived cortical layer marker program transfer",
+  "holdout": "leave-one-donor-out",
+  "n_markers_per_layer": 25,
+  "folds": [
+    {
+      "heldout_donor": 0,
+      "test_files": [
+        "151507",
+        "151508",
+        "151509",
+        "151510"
+      ],
+      "classes": [
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "WM"
+      ],
+      "programs": [
+        {
+          "class": "L1",
+          "n_markers": 25,
+          "markers": [
+            "MALAT1",
+            "MYH11",
+            "STMN1",
+            "DYNLL1",
+            "RELN",
+            "HINT1",
+            "ACTA2",
+            "TUBA1A",
+            "CALM2",
+            "DES",
+            "SNAP25",
+            "MGST3",
+            "BEX1",
+            "SNCA",
+            "CHN1",
+            "MYL9",
+            "STMN2",
+            "ATP5F1E",
+            "QDPR",
+            "RPL34",
+            "GAP43",
+            "TAGLN",
+            "YWHAG",
+            "BASP1",
+            "GFAP"
+          ],
+          "model": {
+            "pearson_r": 0.8515001535415649,
+            "r2": 0.724412202835083
+          },
+          "raw": {
+            "pearson_r": 0.9961946606636047,
+            "r2": 0.9923676252365112
+          },
+          "pca": {
+            "pearson_r": 0.8168131709098816,
+            "r2": 0.6618329286575317
+          }
+        },
+        {
+          "class": "L2",
+          "n_markers": 25,
+          "markers": [
+            "HPCAL1",
+            "SERPINE2",
+            "PENK",
+            "CXCL14",
+            "CNR1",
+            "RELN",
+            "CALB2",
+            "LAMP5",
+            "RGS12",
+            "SOWAHA",
+            "MALAT1",
+            "GNAL",
+            "THSD7A",
+            "NPTXR",
+            "RASGRF2",
+            "SST",
+            "NECAB2",
+            "DPP6",
+            "MEG3",
+            "HS6ST3",
+            "CUX2",
+            "KCNIP2",
+            "STXBP6",
+            "CALB1",
+            "CYP46A1"
+          ],
+          "model": {
+            "pearson_r": 0.7460322380065918,
+            "r2": 0.51918625831604
+          },
+          "raw": {
+            "pearson_r": 0.9906233549118042,
+            "r2": 0.9811217784881592
+          },
+          "pca": {
+            "pearson_r": 0.7904530763626099,
+            "r2": 0.6058924198150635
+          }
+        },
+        {
+          "class": "L3",
+          "n_markers": 25,
+          "markers": [
+            "MBP",
+            "PLP1",
+            "HOPX",
+            "MT3",
+            "TF",
+            "MOBP",
+            "GFAP",
+            "CNP",
+            "SPP1",
+            "CRYAB",
+            "MAG",
+            "CCK",
+            "CST3",
+            "ERMN",
+            "CLDN11",
+            "PPP1R14A",
+            "BCAS1",
+            "MOG",
+            "RNASE1",
+            "ENPP2",
+            "SCD",
+            "DIRAS2",
+            "OPALIN",
+            "TMEM144",
+            "SELENOP"
+          ],
+          "model": {
+            "pearson_r": 0.8463162183761597,
+            "r2": 0.7113935947418213
+          },
+          "raw": {
+            "pearson_r": 0.9966243505477905,
+            "r2": 0.9932344555854797
+          },
+          "pca": {
+            "pearson_r": 0.8929097056388855,
+            "r2": 0.7948875427246094
+          }
+        },
+        {
+          "class": "L4",
+          "n_markers": 25,
+          "markers": [
+            "SCN1B",
+            "PVALB",
+            "RORB",
+            "SNCG",
+            "GFAP",
+            "PARM1",
+            "LGALS1",
+            "CHGA",
+            "TPBG",
+            "SYT2",
+            "STMN2",
+            "PLCH1",
+            "NREP",
+            "CCNI",
+            "LMO4",
+            "ENO2",
+            "DCLK1",
+            "MEF2C",
+            "TRHDE",
+            "GAP43",
+            "OLFM1",
+            "STXBP1",
+            "NSG1",
+            "HPCAL1",
+            "NRGN"
+          ],
+          "model": {
+            "pearson_r": 0.8608116507530212,
+            "r2": 0.7397265434265137
+          },
+          "raw": {
+            "pearson_r": 0.9981729984283447,
+            "r2": 0.996326744556427
+          },
+          "pca": {
+            "pearson_r": 0.8610363602638245,
+            "r2": 0.739746630191803
+          }
+        },
+        {
+          "class": "L5",
+          "n_markers": 25,
+          "markers": [
+            "PCP4",
+            "TRABD2A",
+            "SMYD2",
+            "HS3ST2",
+            "SNAP25",
+            "VAT1L",
+            "CLSTN2",
+            "EFHD2",
+            "DIRAS2",
+            "CAMK2D",
+            "STMN2",
+            "FAM3C",
+            "SLC24A2",
+            "FEZF2",
+            "STMN1",
+            "IPCEF1",
+            "SNCG",
+            "SNCA",
+            "NREP",
+            "DCLK1",
+            "ETV1",
+            "RPRM",
+            "BASP1",
+            "SLC17A7",
+            "NAP1L5"
+          ],
+          "model": {
+            "pearson_r": 0.8616967797279358,
+            "r2": 0.7401410937309265
+          },
+          "raw": {
+            "pearson_r": 0.9985581040382385,
+            "r2": 0.9971027374267578
+          },
+          "pca": {
+            "pearson_r": 0.8654299378395081,
+            "r2": 0.7486425638198853
+          }
+        },
+        {
+          "class": "L6",
+          "n_markers": 25,
+          "markers": [
+            "KRT17",
+            "B3GALT2",
+            "THEMIS",
+            "MBP",
+            "DIRAS2",
+            "PLP1",
+            "SEMA3E",
+            "NR4A2",
+            "ISLR",
+            "SLC35F1",
+            "HS3ST2",
+            "TBR1",
+            "NPTX1",
+            "SSTR2",
+            "SNCG",
+            "HOPX",
+            "HS3ST4",
+            "SLC17A7",
+            "MAP2K1",
+            "CLSTN2",
+            "DACH1",
+            "CUX2",
+            "OLFML2B",
+            "PCDH17",
+            "GNG2"
+          ],
+          "model": {
+            "pearson_r": 0.7321388125419617,
+            "r2": 0.5121051073074341
+          },
+          "raw": {
+            "pearson_r": 0.9907892942428589,
+            "r2": 0.9814656972885132
+          },
+          "pca": {
+            "pearson_r": 0.7144721150398254,
+            "r2": 0.49247097969055176
+          }
+        },
+        {
+          "class": "WM",
+          "n_markers": 25,
+          "markers": [
+            "MBP",
+            "MOBP",
+            "NRGN",
+            "PLP1",
+            "MAG",
+            "OLFM1",
+            "CCK",
+            "TF",
+            "ERMN",
+            "SNAP25",
+            "GFAP",
+            "CLDN11",
+            "MOG",
+            "SPP1",
+            "CNP",
+            "PPP1R14A",
+            "TMEM144",
+            "BCAS1",
+            "CRYAB",
+            "ENPP2",
+            "CHN1",
+            "MAL",
+            "CALM3",
+            "KLK6",
+            "MYRF"
+          ],
+          "model": {
+            "pearson_r": 0.8324196934700012,
+            "r2": 0.6894335746765137
+          },
+          "raw": {
+            "pearson_r": 0.9999999403953552,
+            "r2": 0.9999999403953552
+          },
+          "pca": {
+            "pearson_r": 0.8683423399925232,
+            "r2": 0.7523360848426819
+          }
+        }
+      ]
+    },
+    {
+      "heldout_donor": 1,
+      "test_files": [
+        "151669",
+        "151670",
+        "151671",
+        "151672"
+      ],
+      "classes": [
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "WM"
+      ],
+      "programs": [
+        {
+          "class": "L3",
+          "n_markers": 25,
+          "markers": [
+            "MBP",
+            "PLP1",
+            "HOPX",
+            "MOBP",
+            "TF",
+            "CCK",
+            "CNP",
+            "MT3",
+            "CRYAB",
+            "SPP1",
+            "MAG",
+            "HPCAL1",
+            "NRGN",
+            "GFAP",
+            "ERMN",
+            "MTRNR2L1",
+            "OLFM1",
+            "CLDN11",
+            "BCAS1",
+            "PPP1R14A",
+            "CALB1",
+            "PCSK1N",
+            "MOG",
+            "TESPA1",
+            "ENPP2"
+          ],
+          "model": {
+            "pearson_r": 0.77567058801651,
+            "r2": 0.5141336917877197
+          },
+          "raw": {
+            "pearson_r": 0.9981755614280701,
+            "r2": 0.9957815408706665
+          },
+          "pca": {
+            "pearson_r": 0.7929972410202026,
+            "r2": 0.4971860647201538
+          }
+        },
+        {
+          "class": "L4",
+          "n_markers": 25,
+          "markers": [
+            "GFAP",
+            "SCN1B",
+            "LGALS1",
+            "SYT2",
+            "RORB",
+            "NRGN",
+            "PVALB",
+            "PLCH1",
+            "GPX3",
+            "SNCG",
+            "DCLK1",
+            "MOBP",
+            "GAP43",
+            "LMO4",
+            "STMN2",
+            "PARM1",
+            "ATP1B1",
+            "MAL",
+            "ERMN",
+            "CLDN11",
+            "HPCAL1",
+            "HSPA8",
+            "S100B",
+            "PTGDS",
+            "SNAP25"
+          ],
+          "model": {
+            "pearson_r": 0.8194907307624817,
+            "r2": 0.6597498655319214
+          },
+          "raw": {
+            "pearson_r": 0.996558427810669,
+            "r2": 0.9930763840675354
+          },
+          "pca": {
+            "pearson_r": 0.8017793893814087,
+            "r2": 0.6250293850898743
+          }
+        },
+        {
+          "class": "L5",
+          "n_markers": 25,
+          "markers": [
+            "PCP4",
+            "TRABD2A",
+            "SNAP25",
+            "HS3ST2",
+            "SMYD2",
+            "CLSTN2",
+            "FEZF2",
+            "DIRAS2",
+            "IPCEF1",
+            "EFHD2",
+            "CAMK2D",
+            "ETV1",
+            "SLC24A2",
+            "NREP",
+            "STMN2",
+            "VAT1L",
+            "GABRA5",
+            "FAM3C",
+            "MGLL",
+            "HPCAL1",
+            "SLC17A7",
+            "BASP1",
+            "PDE1A",
+            "STMN1",
+            "RORB"
+          ],
+          "model": {
+            "pearson_r": 0.8646121621131897,
+            "r2": 0.7467606067657471
+          },
+          "raw": {
+            "pearson_r": 0.9975020289421082,
+            "r2": 0.9950093626976013
+          },
+          "pca": {
+            "pearson_r": 0.8670403361320496,
+            "r2": 0.7496546506881714
+          }
+        },
+        {
+          "class": "L6",
+          "n_markers": 25,
+          "markers": [
+            "KRT17",
+            "MBP",
+            "SNCG",
+            "HOPX",
+            "MTRNR2L1",
+            "SEMA3E",
+            "CRYM",
+            "PLP1",
+            "B3GALT2",
+            "MT3",
+            "THEMIS",
+            "ATP1B1",
+            "NR4A2",
+            "DIRAS2",
+            "ISLR",
+            "GPX3",
+            "CKB",
+            "CUX2",
+            "MIF",
+            "PARM1",
+            "HS3ST4",
+            "CBLN4",
+            "ATP5F1E",
+            "ITM2B",
+            "C14ORF132"
+          ],
+          "model": {
+            "pearson_r": 0.7821773886680603,
+            "r2": 0.5816887617111206
+          },
+          "raw": {
+            "pearson_r": 0.988693118095398,
+            "r2": 0.9761151075363159
+          },
+          "pca": {
+            "pearson_r": 0.7467464804649353,
+            "r2": 0.5267960429191589
+          }
+        },
+        {
+          "class": "WM",
+          "n_markers": 25,
+          "markers": [
+            "MBP",
+            "MOBP",
+            "PLP1",
+            "ERMN",
+            "MAG",
+            "NRGN",
+            "TF",
+            "CLDN11",
+            "GFAP",
+            "MOG",
+            "SNAP25",
+            "SPP1",
+            "PPP1R14A",
+            "CNP",
+            "CRYAB",
+            "TMEM144",
+            "CCK",
+            "BCAS1",
+            "MAL",
+            "ENPP2",
+            "OLFM1",
+            "OPALIN",
+            "RNASE1",
+            "KLK6",
+            "MYRF"
+          ],
+          "model": {
+            "pearson_r": 0.8414915800094604,
+            "r2": 0.6986196637153625
+          },
+          "raw": {
+            "pearson_r": 0.9999999403953552,
+            "r2": 0.9999998807907104
+          },
+          "pca": {
+            "pearson_r": 0.8842846751213074,
+            "r2": 0.7587178349494934
+          }
+        }
+      ]
+    },
+    {
+      "heldout_donor": 2,
+      "test_files": [
+        "151673",
+        "151674",
+        "151675",
+        "151676"
+      ],
+      "classes": [
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "WM"
+      ],
+      "programs": [
+        {
+          "class": "L1",
+          "n_markers": 25,
+          "markers": [
+            "CHN1",
+            "SNAP25",
+            "GFAP",
+            "NRGN",
+            "MT3",
+            "GAP43",
+            "CST3",
+            "SLC17A7",
+            "BASP1",
+            "CALM2",
+            "STMN2",
+            "LMO4",
+            "YWHAG",
+            "APP",
+            "STMN1",
+            "CALM3",
+            "MTRNR2L1",
+            "OLFM1",
+            "THY1",
+            "HSP90AB1",
+            "SYP",
+            "HSP90AA1",
+            "ENO2",
+            "STXBP1",
+            "ATP1B1"
+          ],
+          "model": {
+            "pearson_r": 0.9103207588195801,
+            "r2": 0.8252794742584229
+          },
+          "raw": {
+            "pearson_r": 0.9992879629135132,
+            "r2": 0.9982556700706482
+          },
+          "pca": {
+            "pearson_r": 0.9261989593505859,
+            "r2": 0.8500951528549194
+          }
+        },
+        {
+          "class": "L2",
+          "n_markers": 25,
+          "markers": [
+            "HPCAL1",
+            "MTRNR2L1",
+            "MBP",
+            "PLP1",
+            "LAMP5",
+            "SERPINE2",
+            "PENK",
+            "MAN1A1",
+            "CALB2",
+            "SOWAHA",
+            "HOPX",
+            "CNR1",
+            "PPP3CA",
+            "OLFM1",
+            "SST",
+            "GNG2",
+            "CXCL14",
+            "STMN2",
+            "KCNIP2",
+            "THSD7A",
+            "PCDH7",
+            "MEIS2",
+            "BAIAP2",
+            "CALB1",
+            "STXBP6"
+          ],
+          "model": {
+            "pearson_r": 0.7259041666984558,
+            "r2": 0.5243571996688843
+          },
+          "raw": {
+            "pearson_r": 0.995033323764801,
+            "r2": 0.9899492263793945
+          },
+          "pca": {
+            "pearson_r": 0.7678326964378357,
+            "r2": 0.5825982093811035
+          }
+        },
+        {
+          "class": "L3",
+          "n_markers": 25,
+          "markers": [
+            "HOPX",
+            "GFAP",
+            "NRGN",
+            "PLP1",
+            "MBP",
+            "OLFM1",
+            "CRYAB",
+            "CHN1",
+            "GAP43",
+            "MOBP",
+            "TESPA1",
+            "TF",
+            "LMO4",
+            "HAPLN4",
+            "CCK",
+            "CKB",
+            "CALB1",
+            "TSC22D1",
+            "CALM1",
+            "CALM3",
+            "SPP1",
+            "CUX2",
+            "HS3ST2",
+            "CYP46A1",
+            "RASGRF2"
+          ],
+          "model": {
+            "pearson_r": 0.752629280090332,
+            "r2": 0.5298393964767456
+          },
+          "raw": {
+            "pearson_r": 0.9999999403953552,
+            "r2": 0.9999999403953552
+          },
+          "pca": {
+            "pearson_r": 0.7539219260215759,
+            "r2": 0.5364865064620972
+          }
+        },
+        {
+          "class": "L4",
+          "n_markers": 25,
+          "markers": [
+            "SCN1B",
+            "PVALB",
+            "STMN2",
+            "LGALS1",
+            "GFAP",
+            "DCLK1",
+            "SNCG",
+            "RORB",
+            "LMO4",
+            "CCNI",
+            "CHGA",
+            "HPCAL1",
+            "NRGN",
+            "GAP43",
+            "ENO2",
+            "TRHDE",
+            "PLCH1",
+            "SYP",
+            "ATP1B1",
+            "PARM1",
+            "TPBG",
+            "HSPA8",
+            "MORF4L1",
+            "NREP",
+            "BASP1"
+          ],
+          "model": {
+            "pearson_r": 0.8872550129890442,
+            "r2": 0.7806870341300964
+          },
+          "raw": {
+            "pearson_r": 0.998908519744873,
+            "r2": 0.9978166818618774
+          },
+          "pca": {
+            "pearson_r": 0.9023871421813965,
+            "r2": 0.7776615619659424
+          }
+        },
+        {
+          "class": "L5",
+          "n_markers": 25,
+          "markers": [
+            "PCP4",
+            "HS3ST2",
+            "SMYD2",
+            "VAT1L",
+            "EFHD2",
+            "CLSTN2",
+            "RPRM",
+            "TRABD2A",
+            "FEZF2",
+            "CAMK2D",
+            "SLC24A2",
+            "IPCEF1",
+            "DIRAS2",
+            "STMN2",
+            "SNCA",
+            "MBP",
+            "SNAP25",
+            "STMN1",
+            "FAM3C",
+            "SNCG",
+            "HPCAL1",
+            "DCLK1",
+            "RXFP1",
+            "PLP1",
+            "SLC17A7"
+          ],
+          "model": {
+            "pearson_r": 0.8388069272041321,
+            "r2": 0.7020155191421509
+          },
+          "raw": {
+            "pearson_r": 0.9943772554397583,
+            "r2": 0.9887698292732239
+          },
+          "pca": {
+            "pearson_r": 0.8507353067398071,
+            "r2": 0.7229323387145996
+          }
+        },
+        {
+          "class": "L6",
+          "n_markers": 25,
+          "markers": [
+            "KRT17",
+            "MBP",
+            "THEMIS",
+            "NR4A2",
+            "PLP1",
+            "B3GALT2",
+            "DIRAS2",
+            "SEMA3E",
+            "NPTX1",
+            "HS3ST2",
+            "ISLR",
+            "TBR1",
+            "MT3",
+            "EFHD2",
+            "CLSTN2",
+            "RXFP1",
+            "MTRNR2L1",
+            "SLC35F1",
+            "MAP2K1",
+            "TF",
+            "MOBP",
+            "HS3ST4",
+            "SSTR2",
+            "NTNG2",
+            "SLC24A2"
+          ],
+          "model": {
+            "pearson_r": 0.7710875868797302,
+            "r2": 0.5884087085723877
+          },
+          "raw": {
+            "pearson_r": 0.9904121160507202,
+            "r2": 0.9797083735466003
+          },
+          "pca": {
+            "pearson_r": 0.7821334600448608,
+            "r2": 0.5661494731903076
+          }
+        },
+        {
+          "class": "WM",
+          "n_markers": 25,
+          "markers": [
+            "MBP",
+            "NRGN",
+            "CCK",
+            "MOBP",
+            "MT3",
+            "OLFM1",
+            "PLP1",
+            "SNAP25",
+            "CKB",
+            "CALM3",
+            "PCSK1N",
+            "CALM1",
+            "GNAS",
+            "TF",
+            "ERMN",
+            "MAG",
+            "CHN1",
+            "SPARCL1",
+            "GFAP",
+            "S100A11",
+            "BEX1",
+            "GAP43",
+            "CNP",
+            "SPP1",
+            "LMO4"
+          ],
+          "model": {
+            "pearson_r": 0.7777835726737976,
+            "r2": 0.5911843776702881
+          },
+          "raw": {
+            "pearson_r": 0.998374342918396,
+            "r2": 0.9960032105445862
+          },
+          "pca": {
+            "pearson_r": 0.7858244776725769,
+            "r2": 0.6085656881332397
+          }
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "model": {
+      "mean_pearson_r": 0.8146392263864216,
+      "median_pearson_r": 0.8324196934700012,
+      "n": 19
+    },
+    "raw": {
+      "mean_pearson_r": 0.996225539006685,
+      "median_pearson_r": 0.9975020289421082,
+      "n": 19
+    },
+    "pca": {
+      "mean_pearson_r": 0.8248073050850316,
+      "median_pearson_r": 0.8168131709098816,
+      "n": 19
+    }
+  },
+  "note": "Marker genes are selected only from the two training donors in each fold; no target-donor labels are used for marker selection or probe fitting."
+}

@@ -1,0 +1,57 @@
+{
+  "study_id": "SFM-TRANSFER-PREREG-001",
+  "status": "ready_for_confirmatory",
+  "frozen_at_utc": "2026-09-27 20:32:48 UTC",
+  "protocol_sha256": "e697a9b039e8d75b98e39af9762945d55d2765203d40a7f350dc47d1d13c2f0c",
+  "analysis_contract_sha256": "d911b8fba92da7bc3aee7be31dde1f01ed1bbc80914bee0070d9fe0e60f4935c",
+  "implementation": {
+    "path": "preregistration/execute_prereg_data_condition.py",
+    "sha256": "76a7ac5be9ab81903a05322fcc8f822d7041d9d9f5052bbf218828d70c105ade",
+    "syntax_check": "pass"
+  },
+  "environment_lock_template": "preregistration/environment_lock.json",
+  "environment_capture_sha256": "484e6d7c02bf38307620eebc59c18dbf61073c5ddf54ab2008d7fc6bc6e4ce0f",
+  "smoke_report": {
+    "path": "artifacts/prereg_confirmatory/smoke_test.json",
+    "sha256": "a74b61c207a2e772f8618547447b29f09c568ad9f4eef94acbc13d6729e6a85e",
+    "result": "pass",
+    "confirmatory": false,
+    "synthetic": true
+  },
+  "real_smoke_report": {
+    "path": "artifacts/prereg_confirmatory/real_smoke.json",
+    "sha256": "eb4003b69f79c959639123aa0adabdc5796c2b4d40d02bdc55b874f997d7762c",
+    "result": "pass",
+    "confirmatory": false,
+    "rows": 270,
+    "common_genes": 5442,
+    "model_input_genes": 6097,
+    "heldout_donors": [
+      0,
+      1,
+      2
+    ],
+    "panel_genes": [
+      545,
+      1361,
+      2721,
+      4082,
+      5442
+    ]
+  },
+  "capture_script": {
+    "path": "preregistration/capture_environment_lock.py",
+    "sha256": "0c8d5631001505fac14a3044056d5b8976822209e61046c39040aec83fd81868"
+  },
+  "checkpoint_resolution": {
+    "rule": "Use the lexicographically first frozen label_heldout checkpoint present in the pre-existing label_heldout_train directory; no outcome-based checkpoint selection.",
+    "path": "/data/spatial_foundation_model_data/pasa_fm/data/reports/label_heldout_train/maskaware_labelheldout_seed20262018.pt",
+    "sha256": "6ea8f0c64098a03385e59b10cd6495635453c8dd695b449ce7792d11c82af899",
+    "alternative_frozen_checkpoint_not_selected": {
+      "path": "/data/spatial_foundation_model_data/pasa_fm/data/reports/label_heldout_train/maskaware_labelheldout_seed20262019.pt",
+      "sha256": "04d37c918bb28bbb32e3a959eb05ee907e09dc3fb6ce75de781739fddda5f96b"
+    }
+  },
+  "confirmatory_execution_rule": "Do not read or report confirmatory outcomes until the execution-host environment is captured, the lock is completed, and the no-outcome smoke test passes.",
+  "hash_scope": "SHA-256 values were recorded for the original archived files. This GitHub copy has renamed paths and labels, so its edited files do not match those archive hashes."
+}

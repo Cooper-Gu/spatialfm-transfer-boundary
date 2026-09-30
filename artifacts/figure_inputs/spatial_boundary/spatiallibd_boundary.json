@@ -1,0 +1,408 @@
+{
+  "stage": "spatial_boundary",
+  "source": "spatialLIBD Human DLPFC Visium",
+  "task": "spatial layer-boundary preservation",
+  "holdout": "leave-one-donor-out",
+  "k_neighbors": 6,
+  "folds": [
+    {
+      "heldout_donor": 0,
+      "slices": [
+        {
+          "file": "151507",
+          "n_spots": 4176,
+          "metrics": {
+            "model": {
+              "n_edges": 12545,
+              "true_same_edge_fraction": 0.9246711837385413,
+              "pred_same_edge_fraction": 0.5685930649661219,
+              "within_layer_consistency": 0.5705172413793104,
+              "boundary_recall": 0.455026455026455,
+              "edge_agreement_accuracy": 0.5618174571542447
+            },
+            "raw": {
+              "n_edges": 12545,
+              "true_same_edge_fraction": 0.9246711837385413,
+              "pred_same_edge_fraction": 0.6390593862096453,
+              "within_layer_consistency": 0.6436206896551724,
+              "boundary_recall": 0.41693121693121693,
+              "edge_agreement_accuracy": 0.6265444400159426
+            },
+            "pca": {
+              "n_edges": 12545,
+              "true_same_edge_fraction": 0.9246711837385413,
+              "pred_same_edge_fraction": 0.6507772020725389,
+              "within_layer_consistency": 0.6555172413793103,
+              "boundary_recall": 0.4074074074074074,
+              "edge_agreement_accuracy": 0.6368274212833799
+            }
+          }
+        },
+        {
+          "file": "151508",
+          "n_spots": 4270,
+          "metrics": {
+            "model": {
+              "n_edges": 12884,
+              "true_same_edge_fraction": 0.9292921452964917,
+              "pred_same_edge_fraction": 0.6009779571561626,
+              "within_layer_consistency": 0.5994320554581141,
+              "boundary_recall": 0.3787047200878156,
+              "edge_agreement_accuracy": 0.5838248990996585
+            },
+            "raw": {
+              "n_edges": 12884,
+              "true_same_edge_fraction": 0.9292921452964917,
+              "pred_same_edge_fraction": 0.6778950636448308,
+              "within_layer_consistency": 0.6773573874551073,
+              "boundary_recall": 0.3150384193194292,
+              "edge_agreement_accuracy": 0.6517385904998447
+            },
+            "pca": {
+              "n_edges": 12884,
+              "true_same_edge_fraction": 0.9292921452964917,
+              "pred_same_edge_fraction": 0.6505743557901272,
+              "within_layer_consistency": 0.6524680531195189,
+              "boundary_recall": 0.3743139407244786,
+              "edge_agreement_accuracy": 0.6328003725551071
+            }
+          }
+        },
+        {
+          "file": "151509",
+          "n_spots": 4729,
+          "metrics": {
+            "model": {
+              "n_edges": 14222,
+              "true_same_edge_fraction": 0.9224441006890732,
+              "pred_same_edge_fraction": 0.6141892842075657,
+              "within_layer_consistency": 0.6150621236374724,
+              "boundary_recall": 0.39619220308250225,
+              "edge_agreement_accuracy": 0.5980874701167206
+            },
+            "raw": {
+              "n_edges": 14222,
+              "true_same_edge_fraction": 0.9224441006890732,
+              "pred_same_edge_fraction": 0.7351286738855295,
+              "within_layer_consistency": 0.739233173260157,
+              "boundary_recall": 0.31368993653671806,
+              "edge_agreement_accuracy": 0.7062297848403881
+            },
+            "pca": {
+              "n_edges": 14222,
+              "true_same_edge_fraction": 0.9224441006890732,
+              "pred_same_edge_fraction": 0.6963155674307411,
+              "within_layer_consistency": 0.6995197804710724,
+              "boundary_recall": 0.3417951042611061,
+              "edge_agreement_accuracy": 0.6717761215018985
+            }
+          }
+        },
+        {
+          "file": "151510",
+          "n_spots": 4557,
+          "metrics": {
+            "model": {
+              "n_edges": 13632,
+              "true_same_edge_fraction": 0.9212881455399061,
+              "pred_same_edge_fraction": 0.6398180751173709,
+              "within_layer_consistency": 0.6424874591926109,
+              "boundary_recall": 0.391425908667288,
+              "edge_agreement_accuracy": 0.6227259389671361
+            },
+            "raw": {
+              "n_edges": 13632,
+              "true_same_edge_fraction": 0.9212881455399061,
+              "pred_same_edge_fraction": 0.7312206572769953,
+              "within_layer_consistency": 0.7361254876980652,
+              "boundary_recall": 0.32618825722274,
+              "edge_agreement_accuracy": 0.7038585680751174
+            },
+            "pca": {
+              "n_edges": 13632,
+              "true_same_edge_fraction": 0.9212881455399061,
+              "pred_same_edge_fraction": 0.7291666666666666,
+              "within_layer_consistency": 0.7333386416115932,
+              "boundary_recall": 0.3196644920782852,
+              "edge_agreement_accuracy": 0.7007775821596244
+            }
+          }
+        }
+      ]
+    },
+    {
+      "heldout_donor": 1,
+      "slices": [
+        {
+          "file": "151669",
+          "n_spots": 3608,
+          "metrics": {
+            "model": {
+              "n_edges": 10792,
+              "true_same_edge_fraction": 0.9507042253521126,
+              "pred_same_edge_fraction": 0.647887323943662,
+              "within_layer_consistency": 0.6522417153996102,
+              "boundary_recall": 0.43609022556390975,
+              "edge_agreement_accuracy": 0.6415863602668643
+            },
+            "raw": {
+              "n_edges": 10792,
+              "true_same_edge_fraction": 0.9507042253521126,
+              "pred_same_edge_fraction": 0.7316530763528539,
+              "within_layer_consistency": 0.7426900584795322,
+              "boundary_recall": 0.48120300751879697,
+              "edge_agreement_accuracy": 0.7297998517420311
+            },
+            "pca": {
+              "n_edges": 10792,
+              "true_same_edge_fraction": 0.9507042253521126,
+              "pred_same_edge_fraction": 0.755930318754633,
+              "within_layer_consistency": 0.7633528265107212,
+              "boundary_recall": 0.38721804511278196,
+              "edge_agreement_accuracy": 0.7448109710896961
+            }
+          }
+        },
+        {
+          "file": "151670",
+          "n_spots": 3454,
+          "metrics": {
+            "model": {
+              "n_edges": 10358,
+              "true_same_edge_fraction": 0.9495076269550107,
+              "pred_same_edge_fraction": 0.6430778142498552,
+              "within_layer_consistency": 0.6561260803253686,
+              "boundary_recall": 0.6022944550669216,
+              "edge_agreement_accuracy": 0.653407993821201
+            },
+            "raw": {
+              "n_edges": 10358,
+              "true_same_edge_fraction": 0.9495076269550107,
+              "pred_same_edge_fraction": 0.737304498938019,
+              "within_layer_consistency": 0.7500762582613116,
+              "boundary_recall": 0.502868068833652,
+              "edge_agreement_accuracy": 0.7375941301409539
+            },
+            "pca": {
+              "n_edges": 10358,
+              "true_same_edge_fraction": 0.9495076269550107,
+              "pred_same_edge_fraction": 0.7565167020660359,
+              "within_layer_consistency": 0.76888662938485,
+              "boundary_recall": 0.47609942638623326,
+              "edge_agreement_accuracy": 0.7541031087082448
+            }
+          }
+        },
+        {
+          "file": "151671",
+          "n_spots": 4034,
+          "metrics": {
+            "model": {
+              "n_edges": 12134,
+              "true_same_edge_fraction": 0.9477501236195813,
+              "pred_same_edge_fraction": 0.5935388165485412,
+              "within_layer_consistency": 0.6007826086956521,
+              "boundary_recall": 0.5378548895899053,
+              "edge_agreement_accuracy": 0.5974946431514752
+            },
+            "raw": {
+              "n_edges": 12134,
+              "true_same_edge_fraction": 0.9477501236195813,
+              "pred_same_edge_fraction": 0.655183781110928,
+              "within_layer_consistency": 0.6640869565217391,
+              "boundary_recall": 0.5063091482649842,
+              "edge_agreement_accuracy": 0.6558430855447502
+            },
+            "pca": {
+              "n_edges": 12134,
+              "true_same_edge_fraction": 0.9477501236195813,
+              "pred_same_edge_fraction": 0.6958958298994561,
+              "within_layer_consistency": 0.7042608695652174,
+              "boundary_recall": 0.4558359621451104,
+              "edge_agreement_accuracy": 0.6912806988626998
+            }
+          }
+        },
+        {
+          "file": "151672",
+          "n_spots": 3749,
+          "metrics": {
+            "model": {
+              "n_edges": 11259,
+              "true_same_edge_fraction": 0.9459987565503153,
+              "pred_same_edge_fraction": 0.5863753441691092,
+              "within_layer_consistency": 0.5930898507182424,
+              "boundary_recall": 0.53125,
+              "edge_agreement_accuracy": 0.5897504218847145
+            },
+            "raw": {
+              "n_edges": 11259,
+              "true_same_edge_fraction": 0.9459987565503153,
+              "pred_same_edge_fraction": 0.6609823252509104,
+              "within_layer_consistency": 0.668481832691766,
+              "boundary_recall": 0.47039473684210525,
+              "edge_agreement_accuracy": 0.6577848832045474
+            },
+            "pca": {
+              "n_edges": 11259,
+              "true_same_edge_fraction": 0.9459987565503153,
+              "pred_same_edge_fraction": 0.7026378896882494,
+              "within_layer_consistency": 0.708571965073702,
+              "boundary_recall": 0.40131578947368424,
+              "edge_agreement_accuracy": 0.6919797495337063
+            }
+          }
+        }
+      ]
+    },
+    {
+      "heldout_donor": 2,
+      "slices": [
+        {
+          "file": "151673",
+          "n_spots": 3604,
+          "metrics": {
+            "model": {
+              "n_edges": 10807,
+              "true_same_edge_fraction": 0.8929397612658462,
+              "pred_same_edge_fraction": 0.63505135560285,
+              "within_layer_consistency": 0.6431088082901555,
+              "boundary_recall": 0.43215211754537597,
+              "edge_agreement_accuracy": 0.6205237346164523
+            },
+            "raw": {
+              "n_edges": 10807,
+              "true_same_edge_fraction": 0.8929397612658462,
+              "pred_same_edge_fraction": 0.6789118164152864,
+              "within_layer_consistency": 0.6894300518134715,
+              "boundary_recall": 0.40881590319792566,
+              "edge_agreement_accuracy": 0.6593874340705098
+            },
+            "pca": {
+              "n_edges": 10807,
+              "true_same_edge_fraction": 0.8929397612658462,
+              "pred_same_edge_fraction": 0.7197187008420468,
+              "within_layer_consistency": 0.7328497409326424,
+              "boundary_recall": 0.3898012100259291,
+              "edge_agreement_accuracy": 0.6961228833163691
+            }
+          }
+        },
+        {
+          "file": "151674",
+          "n_spots": 3632,
+          "metrics": {
+            "model": {
+              "n_edges": 10855,
+              "true_same_edge_fraction": 0.8936895439889452,
+              "pred_same_edge_fraction": 0.5991708889912483,
+              "within_layer_consistency": 0.6043706834346975,
+              "boundary_recall": 0.4445407279029463,
+              "edge_agreement_accuracy": 0.5873790879778904
+            },
+            "raw": {
+              "n_edges": 10855,
+              "true_same_edge_fraction": 0.8936895439889452,
+              "pred_same_edge_fraction": 0.6923998157531092,
+              "within_layer_consistency": 0.7034326358107411,
+              "boundary_recall": 0.4003466204506066,
+              "edge_agreement_accuracy": 0.6712114233072317
+            },
+            "pca": {
+              "n_edges": 10855,
+              "true_same_edge_fraction": 0.8936895439889452,
+              "pred_same_edge_fraction": 0.6914785812989406,
+              "within_layer_consistency": 0.7053911967838368,
+              "boundary_recall": 0.4254766031195841,
+              "edge_agreement_accuracy": 0.6756333486872409
+            }
+          }
+        },
+        {
+          "file": "151675",
+          "n_spots": 3557,
+          "metrics": {
+            "model": {
+              "n_edges": 10648,
+              "true_same_edge_fraction": 0.890214124718257,
+              "pred_same_edge_fraction": 0.638335837716003,
+              "within_layer_consistency": 0.6451102436965924,
+              "boundary_recall": 0.41659538066723695,
+              "edge_agreement_accuracy": 0.6200225394440271
+            },
+            "raw": {
+              "n_edges": 10648,
+              "true_same_edge_fraction": 0.890214124718257,
+              "pred_same_edge_fraction": 0.6694214876033058,
+              "within_layer_consistency": 0.6761261736470092,
+              "boundary_recall": 0.3849443969204448,
+              "edge_agreement_accuracy": 0.6441585274229902
+            },
+            "pca": {
+              "n_edges": 10648,
+              "true_same_edge_fraction": 0.890214124718257,
+              "pred_same_edge_fraction": 0.7058602554470323,
+              "within_layer_consistency": 0.7188521995991138,
+              "boundary_recall": 0.39948674080410607,
+              "edge_agreement_accuracy": 0.6837903831705484
+            }
+          }
+        },
+        {
+          "file": "151676",
+          "n_spots": 3425,
+          "metrics": {
+            "model": {
+              "n_edges": 10285,
+              "true_same_edge_fraction": 0.8906174039863879,
+              "pred_same_edge_fraction": 0.6405444822557123,
+              "within_layer_consistency": 0.6482532751091703,
+              "boundary_recall": 0.4222222222222222,
+              "edge_agreement_accuracy": 0.6235294117647059
+            },
+            "raw": {
+              "n_edges": 10285,
+              "true_same_edge_fraction": 0.8906174039863879,
+              "pred_same_edge_fraction": 0.6827418570734078,
+              "within_layer_consistency": 0.6889737991266376,
+              "boundary_recall": 0.368,
+              "edge_agreement_accuracy": 0.6538648517258143
+            },
+            "pca": {
+              "n_edges": 10285,
+              "true_same_edge_fraction": 0.8906174039863879,
+              "pred_same_edge_fraction": 0.7057851239669422,
+              "within_layer_consistency": 0.7149563318777292,
+              "boundary_recall": 0.3688888888888889,
+              "edge_agreement_accuracy": 0.6771025765678172
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "model": {
+      "true_same_edge_fraction": 0.9215930951417057,
+      "pred_same_edge_fraction": 0.6172966870770169,
+      "within_layer_consistency": 0.6225485121114164,
+      "boundary_recall": 0.4536957754518817,
+      "edge_agreement_accuracy": 0.6083458298554242
+    },
+    "raw": {
+      "true_same_edge_fraction": 0.9215930951417057,
+      "pred_same_edge_fraction": 0.6909918699595684,
+      "within_layer_consistency": 0.6983028753683925,
+      "boundary_recall": 0.407894142669885,
+      "edge_agreement_accuracy": 0.6748346308825101
+    },
+    "pca": {
+      "true_same_edge_fraction": 0.9215930951417057,
+      "pred_same_edge_fraction": 0.7050547661602842,
+      "within_layer_consistency": 0.7131637896924423,
+      "boundary_recall": 0.3956086342022996,
+      "edge_agreement_accuracy": 0.6880837681196944
+    }
+  },
+  "note": "Coordinates and labels from the held-out slices; classifiers are trained on other donors only. Raw uses top-variance training genes and PCA is train-only."
+}

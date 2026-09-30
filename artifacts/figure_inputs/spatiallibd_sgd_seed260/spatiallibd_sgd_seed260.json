@@ -1,0 +1,108 @@
+{
+  "stage": "spatiallibd_sgd_seed260",
+  "source": "spatialLIBD Human DLPFC Visium",
+  "task": "spot-level cortical layer",
+  "holdout": "leave-one-donor-out (3 donors, 12 slices)",
+  "common_genes": 5442,
+  "seed_offset": 260,
+  "folds": [
+    {
+      "heldout_donor": 0,
+      "test_files": [
+        "151507",
+        "151508",
+        "151509",
+        "151510"
+      ],
+      "n_train": 29063,
+      "n_test": 17732,
+      "classes": [
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "WM"
+      ],
+      "probe_seed": 260,
+      "maskaware": {
+        "macro_f1": 0.436909995815334,
+        "accuracy": 0.515452289645838
+      },
+      "raw": {
+        "macro_f1": 0.5076959262423069,
+        "accuracy": 0.6100834649221746
+      },
+      "pca": {
+        "macro_f1": 0.5199224242959106,
+        "accuracy": 0.5909090909090909
+      }
+    },
+    {
+      "heldout_donor": 1,
+      "test_files": [
+        "151669",
+        "151670",
+        "151671",
+        "151672"
+      ],
+      "n_train": 23862,
+      "n_test": 14845,
+      "classes": [
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "WM"
+      ],
+      "probe_seed": 261,
+      "maskaware": {
+        "macro_f1": 0.4863771480944369,
+        "accuracy": 0.5659144493095318
+      },
+      "raw": {
+        "macro_f1": 0.5614302417416794,
+        "accuracy": 0.6761872684405523
+      },
+      "pca": {
+        "macro_f1": 0.5623074782281717,
+        "accuracy": 0.6817110138093634
+      }
+    },
+    {
+      "heldout_donor": 2,
+      "test_files": [
+        "151673",
+        "151674",
+        "151675",
+        "151676"
+      ],
+      "n_train": 32577,
+      "n_test": 14218,
+      "classes": [
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "WM"
+      ],
+      "probe_seed": 262,
+      "maskaware": {
+        "macro_f1": 0.4434378244729386,
+        "accuracy": 0.4939513293008862
+      },
+      "raw": {
+        "macro_f1": 0.5552745741136305,
+        "accuracy": 0.5986777324518217
+      },
+      "pca": {
+        "macro_f1": 0.5420414858149741,
+        "accuracy": 0.5977633985089323
+      }
+    }
+  ],
+  "note": "Frozen label_heldout checkpoints; fixed 100-step SGD, 1500 train spots/class cap, no target-donor adaptation; train-only randomized PCA."
+}

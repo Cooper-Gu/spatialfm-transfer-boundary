@@ -1,0 +1,22 @@
+{
+  "study_id": "SFM-TRANSFER-PREREG-001",
+  "parent_manifest": "PREREG_manifest_initial.json",
+  "freeze_time_utc": "2026-09-27 19:26:22 UTC",
+  "manifest_update_time_utc": "2026-09-27 20:06:07 UTC",
+  "protocol_sha256": "e697a9b039e8d75b98e39af9762945d55d2765203d40a7f350dc47d1d13c2f0c",
+  "analysis_contract_sha256": "d911b8fba92da7bc3aee7be31dde1f01ed1bbc80914bee0070d9fe0e60f4935c",
+  "status": "doi_reserved_pending_publication",
+  "public_registry": {
+    "provider": "Zenodo",
+    "record_id": "23001983",
+    "doi": "10.5281/zenodo.23001983",
+    "url": "https://zenodo.org/records/23001983",
+    "concept_doi": "10.5281/zenodo.23001982",
+    "checked_at_utc": "2026-09-27 20:06:07 UTC",
+    "api_is_published": null,
+    "api_publication_date": null
+  },
+  "execution_rule": "Do not collect confirmatory outcomes until the Zenodo record reports is_published=true (or an equivalent public registry state) and the executable analysis implementation plus environment lock are frozen and hashed.",
+  "next_required_action": "Publish Zenodo record 23001983; then create a subsequent manifest version recording the public publication timestamp before the confirmatory run.",
+  "hash_scope": "SHA-256 values were recorded for the original archived files. This GitHub copy has renamed paths and labels, so its edited files do not match those archive hashes."
+}

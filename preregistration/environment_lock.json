@@ -1,0 +1,43 @@
+{
+  "study_id": "SFM-TRANSFER-PREREG-001",
+  "generated_utc": "2026-09-27 21:03:45 UTC",
+  "status": "captured_smoke_pass",
+  "purpose": "Pre-confirmatory execution-host environment lock captured before any confirmatory outcome.",
+  "python": "3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 16:50:00) [GCC 14.3.0]",
+  "platform": "Linux-5.15.0-105-generic-x86_64-with-glibc2.35",
+  "packages": {
+    "numpy": "2.5.2",
+    "scikit-learn": "1.9.1",
+    "torch": "2.12.0+cu130"
+  },
+  "cuda": {
+    "version": "13.0",
+    "available": true,
+    "device_count": 2,
+    "devices": [
+      "NVIDIA GeForce RTX 4090",
+      "NVIDIA GeForce RTX 4090"
+    ]
+  },
+  "device_rule": "Use CPU for the implementation smoke test. Use one fixed CUDA device for confirmatory probing unless the server run manifest explicitly records the CUDA device and deterministic settings.",
+  "files": {
+    "implementation_sha256": "76a7ac5be9ab81903a05322fcc8f822d7041d9d9f5052bbf218828d70c105ade",
+    "analysis_contract_sha256": "d911b8fba92da7bc3aee7be31dde1f01ed1bbc80914bee0070d9fe0e60f4935c",
+    "protocol_sha256": "e697a9b039e8d75b98e39af9762945d55d2765203d40a7f350dc47d1d13c2f0c"
+  },
+  "real_smoke_report": {
+    "path": "artifacts/prereg_confirmatory/real_smoke.json",
+    "sha256": "eb4003b69f79c959639123aa0adabdc5796c2b4d40d02bdc55b874f997d7762c",
+    "stage": "real_smoke",
+    "confirmatory": false,
+    "rows": 270,
+    "common_genes": 5442,
+    "model_input_genes": 6097,
+    "checkpoint": "maskaware_labelheldout_seed20262018.pt"
+  },
+  "capture_script": "preregistration/capture_environment_lock.py",
+  "implementation": "preregistration/execute_prereg_data_condition.py",
+  "analysis_contract": "preregistration/analysis_contract.json",
+  "protocol": "preregistration/PREREG_SFM_transfer_data_condition_gate.md",
+  "hash_scope": "SHA-256 values were recorded for the original archived files. This GitHub copy has renamed paths and labels, so its edited files do not match those archive hashes."
+}

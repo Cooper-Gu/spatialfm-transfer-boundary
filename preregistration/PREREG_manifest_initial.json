@@ -1,0 +1,10 @@
+{
+  "study_id": "SFM-TRANSFER-PREREG-001",
+  "freeze_time_utc": "2026-09-27 19:26:22 UTC",
+  "protocol_sha256": "e697a9b039e8d75b98e39af9762945d55d2765203d40a7f350dc47d1d13c2f0c",
+  "analysis_contract_sha256": "d911b8fba92da7bc3aee7be31dde1f01ed1bbc80914bee0070d9fe0e60f4935c",
+  "status": "locally_frozen_pending_public_registry",
+  "public_registry": null,
+  "execution_rule": "Do not collect confirmatory outcomes until a public registry DOI or institutional timestamped archive is added.",
+  "hash_scope": "SHA-256 values were recorded for the original archived files. This GitHub copy has renamed paths and labels, so its edited files do not match those archive hashes."
+}

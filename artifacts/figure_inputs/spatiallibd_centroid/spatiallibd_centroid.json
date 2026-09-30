@@ -1,0 +1,104 @@
+{
+  "stage": "spatiallibd_centroid",
+  "source": "spatialLIBD Human DLPFC Visium",
+  "task": "spot-level cortical layer",
+  "holdout": "leave-one-donor-out",
+  "probe": "nearest class centroid with train-only standardization; PCA train-only",
+  "folds": [
+    {
+      "heldout_donor": 0,
+      "test_files": [
+        "151507",
+        "151508",
+        "151509",
+        "151510"
+      ],
+      "n_train": 29063,
+      "n_test": 17732,
+      "classes": [
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "WM"
+      ],
+      "model": {
+        "macro_f1": 0.31913496565200344,
+        "accuracy": 0.4177757726144823
+      },
+      "raw": {
+        "macro_f1": 0.45067521273370276,
+        "accuracy": 0.5526167381006091
+      },
+      "pca": {
+        "macro_f1": 0.5835670776560583,
+        "accuracy": 0.6179224001804647
+      }
+    },
+    {
+      "heldout_donor": 1,
+      "test_files": [
+        "151669",
+        "151670",
+        "151671",
+        "151672"
+      ],
+      "n_train": 23862,
+      "n_test": 14845,
+      "classes": [
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "WM"
+      ],
+      "model": {
+        "macro_f1": 0.2739069486042892,
+        "accuracy": 0.2939710340181879
+      },
+      "raw": {
+        "macro_f1": 0.3994376471650771,
+        "accuracy": 0.5052879757494105
+      },
+      "pca": {
+        "macro_f1": 0.4867819707508472,
+        "accuracy": 0.6317952172448635
+      }
+    },
+    {
+      "heldout_donor": 2,
+      "test_files": [
+        "151673",
+        "151674",
+        "151675",
+        "151676"
+      ],
+      "n_train": 32577,
+      "n_test": 14218,
+      "classes": [
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "WM"
+      ],
+      "model": {
+        "macro_f1": 0.2940124307474234,
+        "accuracy": 0.35054156702771133
+      },
+      "raw": {
+        "macro_f1": 0.4707226898975073,
+        "accuracy": 0.4937403291602194
+      },
+      "pca": {
+        "macro_f1": 0.5775149106166427,
+        "accuracy": 0.6113377408918272
+      }
+    }
+  ],
+  "note": "Frozen label_heldout checkpoints; no target-donor adaptation."
+}

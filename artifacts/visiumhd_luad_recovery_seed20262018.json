@@ -1,0 +1,29 @@
+{
+  "external_npz": "/data/spatial_foundation_model_data/pasa_fm/data/processed/external_union/visiumhd_luad_2um_union.npz",
+  "train_npz": "/data/spatial_foundation_model_data/pasa_fm/data/processed/public_regions_union6k_pilot.npz",
+  "checkpoint": "/data/spatial_foundation_model_data/pasa_fm/data/reports/label_heldout_train/maskaware_labelheldout_seed20262018.pt",
+  "seed": 20262018,
+  "n_regions": 8192,
+  "n_masked": 967351,
+  "available_fraction": 0.12924389043792028,
+  "baselines": {
+    "zero": {
+      "mse": 0.666133463382721,
+      "pearson": 0.0,
+      "relative_to_zero": 0.0,
+      "relative_to_train_mean": 0.03908881889468596
+    },
+    "train_panel_mean": {
+      "mse": 0.6932310461997986,
+      "pearson": 0.0281732323480077,
+      "relative_to_zero": -0.040678909417749765,
+      "relative_to_train_mean": 0.0
+    }
+  },
+  "maskaware_local_recovery": {
+    "mse": 0.6566149592399597,
+    "pearson": 0.2567946687460144,
+    "relative_to_zero": 0.01428918477451191,
+    "relative_to_train_mean": 0.05281945631339424
+  }
+}

@@ -1,6 +1,6 @@
 # SpatialFM transfer-boundary study
 
-This repository contains the reproducible code and compact report bundle for the study **��Beyond local gains: cross-donor transfer boundaries of spatial transcriptomic representations.��** It evaluates frozen spatial transcriptomic representations under donor-heldout, cross-source and continuous spatial readouts. The repository documents the tested models and evidence boundary.
+This repository contains the reproducible code and compact report bundle for the study **“Beyond local gains: cross-donor transfer boundaries of spatial transcriptomic representations.”** It evaluates frozen spatial transcriptomic representations under donor-heldout, cross-source and continuous spatial readouts. The repository documents the tested models and evidence boundary.
 
 This GitHub copy uses descriptive file, directory and model-mode names. The [Zenodo protocol archive](https://doi.org/10.5281/zenodo.23001983) is the authoritative frozen record. SHA-256 values in the preregistration manifests and locks refer to that original archive and do not verify the edited files in this copy. To rerun analyses with local reports, place them under the descriptive paths used by the scripts.
 
